@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3b82f6">
+    <title>Resources - EcoLearn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Styles.css">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="font-bold text-xl text-blue-500">EcoLearn</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="Index.html" class="nav-link">Home</a>
+                    <a href="Courses 2.html" class="nav-link">Courses</a>
+                    <a href="resources.html" class="nav-link active">Resources</a>
+                    <a href="About.html" class="nav-link">About</a>
+                    <a href="Contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
+                <a href="Index.html" class="block py-2 nav-link">Home</a>
+                <a href="Courses 2.html" class="block py-2 nav-link">Courses</a>
+                <a href="resources.html" class="block py-2 nav-link active">Resources</a>
+                <a href="About.html" class="block py-2 nav-link">About</a>
+                <a href="Contact.html" class="block py-2 nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offline Message -->
+    <div class="offline-message" id="offline-message">
+        You are currently offline. Some features may be limited.
+    </div>
+
+    <!-- Resources Page Content -->
+    <div class="page pt-20">
+        <div class="container mx-auto px-4 py-12">
+            <h1 class="text-4xl font-bold mb-2">Environmental Resources</h1>
+            <p class="text-gray-600 mb-8">Access free tools, guides, and materials to support your environmental education journey.</p>
+            
+            <!-- Resource Categories -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-6 rounded-lg transition duration-300 resource-filter active" data-category="all">
+                    All Resources
+                </button>
+            </div>
+            
+            <!-- Resources List -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Resource 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card resource-item" data-category="guides">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-indigo-400 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm font-medium text-blue-500 bg-blue-100 py-1 px-2 rounded-full">Guide</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Home Energy Conservation Guide</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive guide to reducing energy consumption and costs in your home.</p>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300 w-full">
+                            Download PDF
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Resource 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card resource-item" data-category="calculators">
+                    <div class="h-48 bg-gradient-to-r from-green-400 to-emerald-400 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm font-medium text-green-500 bg-green-100 py-1 px-2 rounded-full">Calculator</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Carbon Footprint Calculator</h3>
+                        <p class="text-gray-600 mb-4">Calculate your personal carbon footprint and get tips to reduce your impact.</p>
+                        <button class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300 w-full">
+                            Use Calculator
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Resource 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card resource-item" data-category="infographics">
+                    <div class="h-48 bg-gradient-to-r from-yellow-400 to-amber-400 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm font-medium text-yellow-500 bg-yellow-100 py-1 px-2 rounded-full">Infographic</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Climate Change: The Facts</h3>
+                        <p class="text-gray-600 mb-4">A visual representation of key climate change facts and statistics.</p>
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300 w-full">
+                            View Infographic
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Resource 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card resource-item" data-category="guides">
+                    <div class="h-48 bg-gradient-to-r from-purple-400 to-violet-400 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm font-medium text-purple-500 bg-purple-100 py-1 px-2 rounded-full">Toolkit</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Community Garden Starter Kit</h3>
+                        <p class="text-gray-600 mb-4">Everything you need to know to start a successful community garden project.</p>
+                        <button class="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300 w-full">
+                            Download Toolkit
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Resource 5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card resource-item" data-category="calculators">
+                    <div class="h-48 bg-gradient-to-r from-red-400 to-rose-400 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                        </svg>
+                    </div>
+                <div class="p-6">
+                        <span class="text-sm font-medium text-red-500 bg-red-100 py-1 px-2 rounded-full">Calculator</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Water Usage Calculator</h3>
+                        <p class="text-gray-600 mb-4">Track your household water consumption and find ways to conserve this precious resource.</p>
+                        <button class="bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300 w-full">
+                            Use Calculator
+                        </button>
+                    </div>
+                </div>
+</body>
+</html>
